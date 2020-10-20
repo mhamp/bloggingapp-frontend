@@ -9,10 +9,12 @@ import { ListSubredditsComponent } from './subreddit/list-subreddits/list-subred
 import { ViewPostComponent } from './post/view-post/view-post.component';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { AuthGuard } from './auth/auth.guard';
+import { ViewSubredditComponent } from './subreddit/view-subreddit/view-subreddit.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent },
    { path: 'view-post/:id', component: ViewPostComponent },
+   { path: "view-subreddit/:id", component: ViewSubredditComponent},
    { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard] },
    { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard]  },
    { path: 'create-subreddit', component: CreateSubredditComponent, canActivate: [AuthGuard]  },
